@@ -1,0 +1,20 @@
+@mixin flex($flexDir, $jc, $alignI, $wrap){
+    display: flex;
+    flex-direction: $flexDir;
+    justify-content: $jc;
+    align-items: $alignI;
+    flex-wrap: $wrap;
+  }
+  
+  @mixin font($weight, $size, $hei, $textT:none){
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $hei;
+    text-transform: $textT;
+  }
+  @mixin bgImg($source){
+    background-image: url($source);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }

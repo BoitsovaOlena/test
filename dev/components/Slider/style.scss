@@ -1,0 +1,61 @@
+@import "../mix.scss";
+.slider {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    button{
+        position: absolute;
+        top:232px;
+        width: 38px;
+        height: 36.7px;
+        background: rgba(1, 145, 211, 0.5);
+        border-radius: 100%;
+        border:none;
+    }
+    .prev{
+        left:30px;
+        &::before{
+            content:"";
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform:translate(-50%, -50%) ;
+            @include bgImg('./Line.png');
+            width: 6px;
+            height: 11px;
+        }
+
+    }
+    .next{
+        right:30px;
+        &::before{
+            content:"";
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform:translate(-50%, -50%) ;
+            @include bgImg('./Line 1.png');
+            width: 6px;
+            height: 11px;
+
+        }
+    }
+}
+@media(max-width:900px){
+    .slider {
+        height: 300px;
+        button{
+            top:134px;
+        }
+    
+    } 
+}
+@media(max-height:740px){
+    .slider {
+        height: 300px;
+        button{
+            top:134px;
+        }
+    
+    } 
+}

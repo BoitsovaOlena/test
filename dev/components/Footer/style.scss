@@ -1,0 +1,56 @@
+@import "../var.scss";
+@import "../mix.scss";
+
+footer{
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: $bgElements;
+    padding: 29px 32px;
+    @include flex(row, flex-end, center, nowrap);
+
+    .footer_nav{
+        @include flex(row, flex-start, center, nowrap);
+        margin-right: 18%;
+        @include font(400, 16px, 22px);
+        color: $textColor2;
+
+        li:not(:last-child){
+            margin-right: 40px;
+        }
+    }
+    .social_networks{
+        @include flex(row, flex-start, center, nowrap);
+        height: 22px;
+
+        a:not(:last-child){
+            margin-right: 31px;
+        }
+    }
+}
+@media(max-width:900px){
+    footer{
+  
+        .footer_nav{
+            margin-right: 5%;
+
+        }
+    }
+}
+@media(max-width:800px){
+    footer{
+        @include flex(column, center, center, nowrap);
+        .footer_nav{
+            margin-right: 0%;
+            margin-bottom: 20px;
+
+        }
+    }
+}
+@media(max-width:560px){
+    footer{
+        .footer_nav{
+            @include font(400, 10px, 14px);
+
+        }
+    }
+}

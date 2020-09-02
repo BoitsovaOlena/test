@@ -1,0 +1,142 @@
+@import "../var.scss";
+@import "../mix.scss";
+
+*, 
+*::before, 
+*::after{
+    box-sizing: border-box;
+}
+*:focus,
+*:active,
+*:hover{
+    box-sizing: border-box;
+    outline: none;
+}
+img{
+    display:block; 
+}
+a {
+    text-decoration: none;
+}
+ul,
+li {
+    list-style: none;
+}
+form,
+p,
+a,
+button,
+input,
+ul,
+li, 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+}
+a, 
+button {
+    cursor: pointer;
+}
+body{
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: $textColor1;
+    background-color: $bgMain;
+    position: relative;   
+}
+
+header{
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: $bgElements;
+    padding: 20px 48px;
+    @include flex(row, space-between, center, wrap);
+    .logo{
+        max-height: 40px;
+    }
+    .nav_burg{
+        width: 14px;
+        height: 11px;
+        @include bgImg('./burger.png')
+    }
+    nav.hidden{
+        display: none;
+    }
+    nav.on{
+        display: block;
+        z-index: 4;
+    }
+    .nav{
+        @include flex(row, flex-start, center, wrap);
+        @include font(400, 18px, 22px);
+        color: $textColor2;
+        
+        li:not(:last-child){
+            margin-right: 40px;
+        }
+    }
+    .inner{
+        @include flex(row, flex-start, center, wrap);
+        img{
+            margin-right: 40px;
+            max-width: 40px;
+            max-height: 40px;
+            
+        }
+        a{
+            img{
+                margin-right: 0px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+main{
+    max-width: 1920px;
+    margin: 0 auto;
+    min-height: calc(100vh - 160px);
+
+}
+@media(max-width:840px) {
+    header{
+        position: relative;
+        .logo_wrap{
+            display: none;
+        }
+        nav{
+            width: 60%;
+            position: absolute;
+            top:0;
+            left:0;
+
+            background-color: $bgMain;
+        }
+        .nav{
+            padding: 20px;
+            @include flex(column, flex-start, flex-start, wrap);
+            @include font(400, 18px, 22px);
+            color: $textColor2;
+            
+            li:not(:last-child){
+                margin-right: 0px;
+                margin-bottom: 30px;
+            }
+        }
+        .nav_close{
+            position: absolute;
+            top:20px;
+            right: 20px;
+        }
+    }
+
+}
+

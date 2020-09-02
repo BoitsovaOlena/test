@@ -1,0 +1,20 @@
+@import "../mix.scss";
+.slider_min {
+    width: 100%;
+    position: relative;
+    .btns{
+        width: 100%;
+        position: relative;
+        top: 20px;
+        @include flex(row, center, center, nowrap)
+    }
+    button{
+        width: 8px;
+        height: 8px;
+        background: rgb(1, 145, 211);
+        border-radius: 100%;
+    }
+    button:not(:last-child){
+        margin-right: 10px;
+    }
+}

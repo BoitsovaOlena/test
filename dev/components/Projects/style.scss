@@ -1,0 +1,27 @@
+@import "../var.scss";
+@import "../mix.scss";
+
+.menu{
+    @include flex(row, flex-start, center, nowrap);
+    padding: 40px 48px;
+    width: 100%;
+    color: $textColor2;
+    @include font(400, 16px, 22px);
+    
+    li{
+        a{
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 100px;
+            background-color: $bgElements;
+        }
+    }
+    li:not(:last-child){
+        margin-right: 10px;
+    }
+}
+@media(max-width:840px){
+    .menu{
+        display: none;
+    }
+}

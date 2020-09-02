@@ -1,0 +1,195 @@
+@import "../var.scss";
+@import "../mix.scss";
+.slide_picture1 {
+    @include bgImg('./image 53.png');
+
+}
+.slide_picture2 {
+    @include bgImg('./image 54.png');
+
+}
+.slide_picture3 {
+    @include bgImg('./image 55.png');
+
+}
+.slide_picture1,
+.slide_picture2,
+.slide_picture3{
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    padding:50px 410px 50px 150px;
+    .main{
+        height: 100%;
+        @include flex(column, space-between, flex-start, nowrap);
+        overflow: hidden;
+        h2{
+            @include font(600, 50px, 68px);
+        }
+        .wrapp{
+            height: 40%;
+            @include flex(column, space-between, flex-start, nowrap);
+            max-width: 420px;
+            margin-bottom: 60px;
+            
+        }
+        p,
+        a{
+            @include font(400, 18px, 25px);
+        }
+    }
+    .details {
+        position: absolute;
+        bottom: 59px;
+        right: 150px;
+        background: rgba(15, 17, 29, 0.76);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 25px 32px 40px 32px;
+        &_main{
+            @include font(600, 18px, 198%);
+
+        }
+        &_inf{
+            @include font(400, 16px, 198%);
+            color: $textColor2;
+
+        }
+        a{
+            display: inline-block;
+            max-width: 300px;
+            max-height: 400px;
+            margin-top: 20px;
+            padding: 14px 59px;
+            background-color: $selectedColor;
+            border-radius: 10px;
+        }
+    }
+
+}
+@media(max-width:1280px){
+    .slide_picture1,
+    .slide_picture2,
+    .slide_picture3{
+        padding:50px 360px 50px 100px;
+        .main{
+            h2{
+                @include font(600, 40px, 68px);
+            }
+            p,
+            a{
+                @include font(400, 16px, 25px);
+            }
+        }
+        .details{
+            right: 100px;
+            a{
+                padding: 14px 48px;
+            }
+        }
+    }
+       
+}
+@media(max-width:1080px){
+    .slide_picture1,
+    .slide_picture2,
+    .slide_picture3{
+        padding:50px 340px 50px 100px;
+        .main{
+            h2{
+                @include font(600, 34px, 50px);
+            }
+        }
+        .details{
+            padding: 20px 20px 35px 20px;
+        }
+    }
+       
+}
+
+@media(max-height:740px){
+    .slide_picture1,
+    .slide_picture2,
+    .slide_picture3{
+        padding:40px 340px 40px 100px;
+        .main{
+            h2{
+                @include font(600, 20px, 28px);
+            }
+            .wrapp{
+                height: 60%;
+                max-width: 380px;
+                margin-bottom: 0px;
+                
+            }
+            a{
+                @include font(400, 13px, 16px);
+            }
+        }
+        .details{
+            padding: 15px 20px 15px 20px;
+            bottom: 40px;
+            &_main{
+                @include font(600, 14px, 198%);
+    
+            }
+            &_inf{
+                @include font(400, 12px, 198%);
+                color: $textColor2;
+    
+            }
+            a{
+                display: inline-block;
+                max-width: 300px;
+                max-height: 400px;
+                margin-top: 20px;
+                padding: 10px 30px;
+                background-color: $selectedColor;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+@media(max-width:900px){
+    .slide_picture1,
+    .slide_picture2,
+    .slide_picture3{
+        padding:40px 340px 40px 100px;
+        .main{
+            h2{
+                @include font(600, 20px, 28px);
+            }
+            .wrapp{
+                height: 60%;
+                max-width: 380px;
+                margin-bottom: 0px;
+                
+            }
+            a{
+                @include font(400, 13px, 16px);
+            }
+        }
+        .details{
+            padding: 15px 20px 15px 20px;
+            bottom: 40px;
+            &_main{
+                @include font(600, 14px, 198%);
+    
+            }
+            &_inf{
+                @include font(400, 12px, 198%);
+                color: $textColor2;
+    
+            }
+            a{
+                display: inline-block;
+                max-width: 300px;
+                max-height: 400px;
+                margin-top: 20px;
+                padding: 10px 30px;
+                background-color: $selectedColor;
+                border-radius: 10px;
+            }
+        }
+    }
+}

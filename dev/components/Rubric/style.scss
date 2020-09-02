@@ -1,0 +1,122 @@
+@import "../var.scss";
+@import "../mix.scss";
+.rubric_title{
+    @include flex(row, space-between, center, nowrap);
+    @include font(600, 20px, 210.68%);
+    margin: 25px 0 15px 0;
+    a{
+        color:$selectedColor;
+    }
+}
+.rubric_list{
+    @include flex(row, space-between, stretch, nowrap);
+    li{
+        max-width: 23%;
+
+        h4{
+            @include font(600, 16px, 145.68%);
+        }
+        p{
+            @include font(400, 16px, 145.68%);
+            color:$textColor2;
+        }
+        .picture1,
+        .picture2,
+        .picture3,
+        .picture4{
+            width: 318px;
+            max-width: 100%;
+            height: 200px;
+            margin-bottom: 5px;
+            border-radius: 16px;
+        }
+        .picture1{
+            @include bgImg('./Rectangle 39.png');
+        }
+        .picture2{
+            @include bgImg('./Rectangle 42.png');
+        }
+        .picture3{
+            @include bgImg('./Rectangle 45.png');
+        }
+        .picture4{
+            @include bgImg('./Rectangle 48.png');
+        }
+    }
+    li:not(:last-child){
+        margin-right: 24px;
+    }
+}
+@media(max-width:1080px){
+    .rubric_list{
+        li{
+            .picture1,
+            .picture2,
+            .picture3,
+            .picture4{
+
+                height: 150px;
+            }
+
+        }
+
+    }
+       
+}
+@media(max-width:900px){
+    .rubric_list{
+        @include flex(row, space-between, stretch, wrap);
+        li{
+           max-width: 48%;
+           .picture1,
+           .picture2,
+           .picture3,
+           .picture4{
+               width: 360px;
+
+           }
+
+        }
+        li:not(:last-child){
+            margin-right: 0px;
+        }
+
+    }
+       
+}
+@media(max-width:540px){
+    .rubric_title{
+        @include flex(column, flex-start, flex-start, nowrap);
+        @include font(600, 14px, 210.68%);
+    }
+    .rubric_list{
+        @include flex(row, space-between, stretch, wrap);
+        
+
+        li{
+           width: 100%;
+           max-width: 100%;
+           h4{
+                @include font(600, 14px, 145.68%);
+            }
+            p{
+                @include font(400, 12px, 145.68%);
+                color:$textColor2;
+            }
+           .picture1,
+           .picture2,
+           .picture3,
+           .picture4{
+               width: 100%;
+
+           }
+
+        }
+        li:not(:last-child){
+            margin-right: 0px;
+        }
+
+    }
+       
+}
+
